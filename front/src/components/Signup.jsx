@@ -20,7 +20,6 @@ const Signup = ({ history }) => {
         })
         .catch(async (err)=>{
             const data = await err.response.data;
-            console.log(data);
             setErrorEmail(data.errors.email);
             setErrorPassword(data.errors.password);
         });
