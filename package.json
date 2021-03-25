@@ -1,0 +1,31 @@
+{
+  "name": "node-express-jwt-auth",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "devstart": "nodemon server.js",
+    "client": "cd front && yarn start",
+    "install-client": "cd front && yarn install",
+    "heroku-postbuild": "yarn run install-client && yarn run build",
+    "build": "cd front && yarn run build"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.0",
+    "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

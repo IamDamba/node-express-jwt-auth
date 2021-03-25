@@ -1,0 +1,8 @@
+h2{
+    margin-bottom: 30px;
+}
+.content > a{
+    background-color: rgb(170, 155, 155);
+    padding: 10px 10px;
+    font-size: .9em;
+}
