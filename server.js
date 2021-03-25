@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require("express");
 const path = require("path");
 const server = express();
@@ -6,8 +8,6 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const authRoute = require("./back/routes/authRoute");
 const PaginatedResult = require("./back/middleware/paginatedResult");
-const dotenv = require('dotenv');
-dotenv.config();
 // --------------------------- Model
 const Smoothie = require("./back/models/Smoothie");
 

@@ -33,14 +33,14 @@ module.exports.smoothies_get = async (req, res) => {
   if (token) {
     jwt.verify(token, process.env.SECRET_TOKEN, (err, decodedToken) => {
       if (err) {
-        console.log("une erreur est arriver dans le verify");
+        console.log("an error occured on verify");
         res.status(400).json({ err: err.message, isGood: false });
       } else {
         res.status(200).json({ message: 'User Connected', isGood: true });
       }
     });
   } else {
-    const err = "Merde, le token est vide";
+    const err = "There is no user Authenticated";
     res.status(400).json({ err: err, isGood: false });
   }
 };
@@ -55,7 +55,7 @@ module.exports.currentUser_get = async (req, res) => {
   if (token) {
     jwt.verify(token, process.env.SECRET_TOKEN, async (err, decodedToken) => {
       if (err) {
-        console.log("une erreur est arriver dans le verify");
+        console.log("an error occured on verify");
         res.locals.user = null;
         res.status(400).json({ isUser: false, user: res.locals.user });
 
@@ -77,7 +77,7 @@ module.exports.delete_get = async (req, res) => {
   if (token) {
     jwt.verify(token, process.env.SECRET_TOKEN, async (err, decodedToken) => {
       if (err) {
-        console.log("une erreur est arriver dans le verify");
+        console.log("an error occured on verify");
         res.locals.user = null;
         res.status(400).json({ user: res.locals.user });
 

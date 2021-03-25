@@ -12,7 +12,7 @@ const Profile = ({ history }) => {
       .then((res) => {
         setTimeout(() => {
           history.push("/");
-        }, 3000);
+        }, 1000);
       })
       .catch((err) => {
         console.log(err);
